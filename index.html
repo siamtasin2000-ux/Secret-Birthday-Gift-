@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffedf3">
+  <meta name="description" content="A little birthday surprise, made with love.">
+  <title>A Secret Birthday Gift 🎁</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sparkle-layer" aria-hidden="true"></div>
+
+  <main>
+    <section class="screen lock-screen" id="lockScreen">
+      <div class="lock-card">
+        <div class="mascot" id="lockMascot" aria-hidden="true">
+          <img src="assets/shinchan-birthday.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+          <span class="emoji-mascot">🎂</span>
+        </div>
+        <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+        <h1>Shhh… it's a secret! 🤫</h1>
+        <p class="intro">Someone made a tiny birthday surprise just for you.</p>
+        <form id="passcodeForm">
+          <label for="passcode">Enter your secret passcode</label>
+          <input id="passcode" name="passcode" type="password" inputmode="numeric" autocomplete="off"
+                 placeholder="Your special code" required maxlength="32">
+          <button class="primary-button" type="submit">Unlock my gift ✨</button>
+          <p class="error-message" id="errorMessage" role="status" aria-live="polite"></p>
+        </form>
+        <p class="tiny-note">A little surprise is waiting inside 💗</p>
+      </div>
+    </section>
+
+    <section class="screen celebration hidden" id="giftScreen">
+      <nav class="topbar">
+        <span class="brand">🎀 A little birthday magic</span>
+        <button class="sound-button" id="musicButton" type="button" aria-pressed="false">♫ Play a tune</button>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+          <h1>Happy Birthday,<br><span id="recipientName">Birthday Star</span>! 🎂</h1>
+          <p class="hero-message">May your day be full of giggles, sweet surprises, warm hugs, and memories that make you smile long after today.</p>
+          <a class="primary-button link-button" href="#memories">Open your memories ↓</a>
+        </div>
+        <div class="gift-art" aria-label="Birthday gift illustration">
+          <div class="gift-box"><span class="gift-ribbon"></span><span class="gift-bow">🎀</span></div>
+          <div class="floating floating-one">✨</div><div class="floating floating-two">💖</div>
+          <div class="floating floating-three">🎈</div>
+        </div>
+      </section>
+
+      <section class="wish-card">
+        <div class="wish-icon">💌</div>
+        <div>
+          <p class="eyebrow">A NOTE JUST FOR YOU</p>
+          <h2>One little wish</h2>
+          <p id="personalMessage">I hope this new chapter brings you happy moments, kind people, brave dreams, and a hundred reasons to smile. Never forget how special you are!</p>
+        </div>
+      </section>
+
+      <section class="memories-section" id="memories">
+        <p class="eyebrow">LITTLE MOMENTS, BIG MEMORIES</p>
+        <h2>Our memory wall 📸</h2>
+        <p class="section-subtitle">A few snapshots to keep close to your heart.</p>
+        <div class="memory-grid">
+          <figure class="polaroid"><img src="assets/memory1.jpg" alt="Memory photo 1" onerror="this.replaceWith(makePlaceholder('📷','Add memory1.jpg'))"><figcaption>Little moments ✨</figcaption></figure>
+          <figure class="polaroid tilt-left"><img src="assets/memory2.jpg" alt="Memory photo 2" onerror="this.replaceWith(makePlaceholder('💗','Add memory2.jpg'))"><figcaption>Good times 💕</figcaption></figure>
+          <figure class="polaroid tilt-right"><img src="assets/memory3.jpg" alt="Memory photo 3" onerror="this.replaceWith(makePlaceholder('🌷','Add memory3.jpg'))"><figcaption>Keep smiling</figcaption></figure>
+          <figure class="polaroid"><img src="assets/memory4.jpg" alt="Memory photo 4" onerror="this.replaceWith(makePlaceholder('🌟','Add memory4.jpg'))"><figcaption>Golden days</figcaption></figure>
+          <figure class="polaroid tilt-left"><img src="assets/memory5.jpg" alt="Memory photo 5" onerror="this.replaceWith(makePlaceholder('🎞️','Add memory5.jpg'))"><figcaption>More memories soon</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="dance-card">
+        <div class="dance-media">
+          <img src="assets/shinchan-dance.gif" alt="Shinchan dancing" onerror="this.replaceWith(makePlaceholder('🕺','Add shinchan-dance.gif'))">
+        </div>
+        <div>
+          <p class="eyebrow">BIRTHDAY MODE: ON</p>
+          <h2>Time to celebrate! 🎉</h2>
+          <p>Today's official mission: eat something yummy, laugh a lot, and enjoy every little moment.</p>
+          <button class="secondary-button" id="confettiButton" type="button">More confetti, please! 🎊</button>
+        </div>
+      </section>
+
+      <section class="final-note">
+        <div class="big-heart">💝</div>
+        <h2>One last thing…</h2>
+        <p>You're one of a kind. I hope this little corner of the internet makes your birthday a little brighter.</p>
+        <p class="signature">Made especially for you ♡</p>
+        <button class="secondary-button" id="replayButton" type="button">Replay the surprise ↻</button>
+      </section>
+      <footer>Made with 💗, confetti, and a little bit of magic.</footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
