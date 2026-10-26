@@ -4,8 +4,8 @@
   The passcode is visible in this JavaScript file to anyone who views the site source.
 */
 const CONFIG = {
-  passcode: "2011",             // Change this to your own secret code
-  recipientName: "Birthday Star", // Change to the birthday person's name
+  passcode: "0000",             // Change this to your own secret code
+  recipientName: "Happy Birthday", // Change to the birthday person's name
   personalMessage: "I hope this new chapter brings you happy moments, kind people, brave dreams, and a hundred reasons to smile. Never forget how special you are!",
   allowMusic: false             // Optional: no music file is included by default
 };
